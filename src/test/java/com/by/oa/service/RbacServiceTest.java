@@ -1,0 +1,20 @@
+package com.by.oa.service;
+
+import com.by.oa.entity.Node;
+import org.junit.Test;
+
+import java.util.List;
+
+import static org.junit.Assert.*;
+
+public class RbacServiceTest {
+    private RbacService rbacService = new RbacService();
+
+    @Test
+    public void selectNodeByUserId() {
+        List<Node> nodes = rbacService.selectNodeByUserId(3l);
+        for (Node node : nodes) {
+            System.out.println(node.getNodeName());
+        }
+    }
+}
